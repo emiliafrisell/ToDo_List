@@ -275,16 +275,17 @@ let controller = (function(toDoCtrl, UICtrl) {
 
         document.getElementById(selEntry).style = 'display: none;';
 
-        console.log('done')
+        // console.log('done')
     };
 
     const ctrlSaveList = function(event) {
-        // let fileName = prompt('What do you want to save the list as?');
 
             // hide the save button
             document.querySelector('.hide').style = 'display = none;';
 
             let divContents = document.querySelector(".container").innerHTML;
+            
+            // create new window
             let printWindow = window.open('', '', 'height=400,width=800');
             printWindow.document.write('<html><head><title>ToDo List</title>');
             printWindow.document.write('<link rel="stylesheet" href="printPDF.css" />'); 
@@ -294,7 +295,7 @@ let controller = (function(toDoCtrl, UICtrl) {
             printWindow.document.write('</div></body></html>');
             printWindow.document.close();
 
-            // printWindow.print();
+            // printWindow.print(); 
         
     };
 
@@ -306,4 +307,5 @@ let controller = (function(toDoCtrl, UICtrl) {
     }
 })(toDoController, UIController); // Passing arguments into module to connect them
 
+// start application
 controller.init();
