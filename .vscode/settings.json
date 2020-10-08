@@ -1,0 +1,9 @@
+{
+    "git.ignoreLimitWarning": true,
+    "spellright.language": [],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ]
+}

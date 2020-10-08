@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --prio1-color: #F36E7F;
+    --prio1-margin: red;
+    --prio2-color: #F5C066;
+    --prio2-margin: yellow;
+    --prio3-color: #A8E9A5;
+    --prio3-margin: green;
+    --done-color: #e0a499;
+    --done-margin: rgb(143, 68, 80);
+
+}
+
+body {
+    font-family: 'PT Serif', serif;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    border: 3px solid #F9C7BE;
+    border-radius: 4px;
+    padding: 0.2rem;
+    padding-left: 0.3rem;
+    font-family: 'Major Mono Display', monospace;
+    font-size:1.1rem;
+    letter-spacing: 0.2rem;
+}
+
+nav {
+    margin-top: 0.8rem;
+    margin-right: 0.7rem;
+}
+
+a:active,
+a:visited,
+a:link {
+    color: #b4b1aa;
+    text-decoration: none;
+}
+
+a:hover {
+    color:  #FCD6CC;
+}
+
+header, footer {
+    background-color: #17120E;
+    color: #b4b1aa;
+    padding: 0.5rem;
+}
+
+/* all list items, menu and todo */
+li {
+    list-style-type: none;
+}
+
+/* NAVBAR */
+    nav li {
+        font-size: 0.7rem;
+        display: inline;
+        padding: 0.3rem;    
+    }
+
+.container {
+    background-color: #FCD6CC;
+    background-blend-mode: soft-light;
+    max-width: 800px;
+    min-height: 50vh;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    font-family: 'Lobster', cursive;
+    text-shadow: 3px 3px #FCD6CC;
+    font-size: 3rem;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
+}
+
+/* QUESTIONS */
+    .questions {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0.5rem;   
+        min-height: 300px;
+
+        font-weight: bolder;
+
+        background-image: url("images/clocks.png");
+        background-blend-mode: soft-light;
+        background-size: cover;
+        background-color: #F9C7BE;
+        
+        align-content: center;
+        justify-items: center;
+    }
+
+    .ques1 {
+        margin-top: 1rem;
+        padding: 0.2rem 0;
+    }
+
+    input[type=text] {
+        width: 100%;
+        padding: 0.4rem;
+        resize: vertical;
+        
+    }
+
+    input[type=submit] {
+        font-size: 0.9rem;
+        color: seashell;
+        background-color: rgb(9, 45, 58);
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+        padding: 8px 20px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        position: relative;
+        left: 3rem;
+    }
+
+    input[type=submit]:active {
+        position: relative;
+        top: 2px;
+        color: seashell;
+    }
+
+    input[type=submit]:hover {
+        opacity: 0.5;
+    }
+
+    .checkboxes {
+        text-shadow: 2px 2px #F9C7BE;
+        padding: 0.2rem 0;
+    }
+
+    .check {
+        margin-right: 1rem;
+    }
+
+    input {
+        padding: 0.1rem;
+    }
+
+/* TODO LIST */
+    .toDo_list {
+        padding: 0.5rem;   
+    }
+
+    #show1, #show2, #show3, .show4, .hide {
+        display: none;
+    }
+
+    .toDo_list div {
+        margin-bottom: 1.5rem;
+    }
+    
+    .toDo_list li {
+        line-height: 1.4;
+        border-radius: 6px;
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+        padding-left: 0.6rem;  
+    }
+
+    .item_description {
+        position: relative;
+        left: 30px;
+    }
+
+    .prio1 li {    
+        background-color: var(--prio1-color);
+        border-left: 4px solid  var(--prio1-margin);
+    }
+
+    .prio2 li {
+        background-color: var(--prio2-color);
+        border-left: 4px solid  var(--prio2-margin);
+    }
+
+    .prio3 li {
+        background-color: var(--prio3-color);
+        border-left: 4px solid var(--prio3-margin);
+    }
+
+    button {
+        padding: 0.15rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        line-height: 1;
+    }
+
+    .item_done {
+        padding-right: 0.5rem;
+    }
+
+    .item_delete {
+        float: right;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    i {
+        text-shadow: 3px 3px #F9C7BE;
+    }
+    
+.item:hover .hidden {
+        display: inline-block;
+    }
+
+    .toDo_list .item:hover .item_description {
+        left: 3.8px;
+    }
+
+/* DONE */
+    .done {
+        padding: 0.5rem;
+        border-top: 2px solid black;
+    }
+
+    .done li {
+        background-color: var(--done-color);
+        border-left: 4px solid var(--done-margin);
+        line-height: 1.4;
+        border-radius: 6px;
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+        padding-left: 0.6rem;  
+    }
+
+    .done .item_description {
+        left: 15px;
+    }
+
+    .done .fas {
+        color: green;
+        font-size: 1.2rem;
+        padding: 2px;
+        text-shadow: 3px 3px #F9C7BE;
+    }
+
+    /* Larger screen */
+    @media only screen and (min-width: 700px) {
+
+        nav {
+            margin-right: 2rem;
+        }
+
+        nav li {
+            padding: 0.7rem;   
+            font-size: 1rem;
+        }
+
+        .questions {
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-top: 2rem;
+        }
+
+        h2 {
+            font-size: 3rem;
+        }
+
+        .checkboxes {
+            font-size: 1.2rem;
+            margin-left: 3rem;
+        }
+
+        .check {
+            display: inline;
+        }
+
+        /* .container {
+            min-height: 96vh;
+        } */
+    }

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Font awesome link -->
+        <script src="https://kit.fontawesome.com/3637873e24.js" crossorigin="anonymous"></script>
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+
+        <link type="text/css" rel="stylesheet" href="style.css" />
+
+        <title>ToDo List</title>
+    </head>
+
+    <body>
+        <header>
+            <p class="logo">TO<br>DO</p>
+
+            <!-- Menu with internal links -->
+            <nav>
+                <ul>
+                    <a href="#prio1"><li>Do First</li></a>
+                    <a href="#prio2"><li>Do Second</li></a>
+                    <a href="#prio3"><li>Do Last</li></a>
+                    <a href="#done"><li>Done</li></a>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="questions">
+
+            <h1>Welcome!</h1>
+
+            <div class="ques1">
+                <h2>What do you need to do today?</h2>
+                <!-- Input what needs to be done -->
+                <input type="text" class="add_description" placeholder="Add description">
+            </div>
+
+            <!-- Checkbox priority -->
+            <section class="checkboxes">
+                <p>When does it need to be done?</p>
+
+                <div class="check">
+                    <input type="checkbox" class="add_type1" id="top_prio" name="top_prio" value="top">
+                        <label for="top_prio">Yesterday!</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="add_type2" id="med_prio" name="med_prio" value="med">
+                        <label for="med_prio">Today</label>
+                </div>
+                
+                <div class="check">
+                    <input type="checkbox" class="add_type3" id="low_prio" name="low_prio" value="low">
+                        <label for="top_prio">Whenever</label>
+                </div>
+            </section>
+
+            <!-- Submit button -->
+            <input type="submit" value="Add item" class="add_btn">
+
+        </section>
+
+        <div class="container">
+            <section class="toDo_list">
+                <div>
+                    <a name="prio1"></a>
+                    <h3 id="show1">DO IT NOW!</h3>
+                    <ul class="prio1">
+
+                        <!-- Example entries -->
+
+                        <!-- <li class="item" id="top_%id%">
+                            <span class="item_done hidden">
+                                <button class="item_done-btn"><i class="fas fa-check"></i>
+                                </button>
+                            </span>
+                            <span class="item_description">%description%</span>
+                            <span class="item_delete hidden">
+                                <button class="item_delete-btn" title="delete"><i class="far fa-times-circle"></i></button>
+                            </span>
+                        </li> -->
+                    </ul>
+                </div>
+
+                <div>
+                    <a name="prio2"></a>
+                    <h3 id="show2">Medium Priority</h3>
+                    <ul class="prio2">
+                        <!-- medium list items -->
+                    </ul>
+                </div>
+
+                <div>
+                    <a name="prio3"></a>
+                    <h3 id="show3">Mañana, mañana</h3>
+                    <ul class="prio3">
+                        <!-- low list items -->
+                    </ul>
+                </div>
+            </section>
+
+            <section class="show4 done">
+                <h3 class="">Yay, Finished!</h3>
+                <a name="done"></a>
+                <ul class="done_list">
+                    <!-- done list items -->
+                </ul>
+            </section>
+
+            <!-- save for later button -->
+            <input type="submit" value="Save for Later" class="save_btn hide">
+            
+        </div>
+
+        <footer> 
+            <p>Copyright <i class="far fa-copyright"></i> Emilia Frisell 2020</p>
+        </footer>
+        
+        <!-- JavaScript link -->
+        <script src="script.js"></script>
+
+    </body>
+</html>
